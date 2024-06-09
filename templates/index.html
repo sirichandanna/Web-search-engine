@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CodeSleuth</title>
+    <link rel="stylesheet" href="templates\style.css" />
+  </head>
+  <body>
+    <div class="form">
+      <form method="POST">
+        <div class ="search box">
+       
+          {{ form.hidden_tag() }}
+      
+
+       
+            {{ form.search.label }}
+        
+
+        
+          {{ form.search() }}
+      
+        
+            {{ form.submit() }}
+        </div>   
+        
+      </form>
+    </div>
+    <div>
+      {% for result in results %}
+      <div class = "result">
+      <a href="{{ result['Question Link'] }}">{{ result['Question Link'] }}</a>
+      <div>
+       <br>
+       <br>
+     
+      {% endfor %}
+    </div>
+  </body>
+</html>
